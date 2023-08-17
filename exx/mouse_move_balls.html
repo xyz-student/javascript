@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main {
+            position: fixed;
+            top: 0%;
+            left: 0%;
+            /* height: 100px;
+            width: 100px;
+            background-color: red; */
+        }
+
+        .fire {
+            position: absolute;
+            bottom: 0%;
+            left: 45%;
+            height: 20px;
+            width: 20px;
+            background-color: red;
+
+        }
+
+        body {
+            cursor: none;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .col1 {
+            animation: ani1 0.3s infinite linear;
+        }
+
+        @keyframes ani1 {
+            0% {
+                transform: translate(0px, 0px) rotate(0deg);
+            }
+
+            100% {
+                transform: translate(-1000px, -1000px) rotate(0deg);
+            }
+        }
+        .col2 {
+            animation: ani2 0.3s infinite linear;
+        }
+
+        @keyframes ani2 {
+            0% {
+                transform: translate(0px, 0px) rotate(0deg);
+            }
+
+            100% {
+                transform: translate(-1000px, -2000px) rotate(0deg);
+            }
+        }
+
+
+
+
+
+        .col4{
+            animation: ani4 0.3s infinite linear;
+        }
+
+        @keyframes ani4 {
+            0% {
+                transform: translate(0px, 0px) rotate(0deg);
+            }
+
+            100% {
+                transform: translate(1000px, -2000px) rotate(0deg);
+            }
+        }
+
+
+        .col3 {
+            animation: ani3 0.3s infinite linear;
+        }
+
+        @keyframes ani3 {
+            0% {
+                transform: translate(0px, 0px) rotate(0deg);
+            }
+
+            100% {
+                transform: translate(0px, -1300px) rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main"> </div>
+    <div class="fire"></div>
+    <script>
+        let main = document.querySelector(".main");
+
+        window.addEventListener("mousemove", function (e) {
+            let X = e.pageX;
+            let Y = e.pageY;
+            main.style.top = Y + "px";
+            main.style.left = X + "px";
+
+            // if (X < 200) {
+            //     main.style.background = "yellow";
+
+            // }else if(X < 400){
+            //     main.style.background = "black";
+
+            // }else if(X < 800){
+            //     main.style.background = "pink";
+
+            // }else if(X < 900){
+            //     main.style.background = "blue";
+
+            // }
+
+            function now_fire() {
+                let fire = document.querySelector(".fire");
+                console.log("X" + X + " " + " y " + Y)
+                if (X < 200) {
+                    
+                    fire.classList.add("col1");
+                    fire.classList.remove("col2");
+                    fire.classList.remove("col3");
+                    fire.classList.remove("col4");
+
+
+                } else if (X < 400) {
+                   
+                    fire.classList.remove("col1");
+                    fire.classList.add("col2");
+                    fire.classList.remove("col3");
+                    fire.classList.remove("col4");
+
+
+                } else if (X < 800) {
+        
+                    fire.classList.add("col3");
+                    fire.classList.remove("col1");
+                    fire.classList.remove("col2");
+                    fire.classList.remove("col4");
+
+                } else if (X < 900) {
+                   
+                    fire.classList.add("col4");
+                    fire.classList.remove("col1");
+                    fire.classList.remove("col2");
+                    fire.classList.remove("col3");
+
+                }
+            }
+            now_fire()
+        })
+    </script>
+</body>
+
+</html>

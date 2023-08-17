@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .a,
+        .b,
+        .c {
+            height: 200px;
+            width: 200px;
+            box-shadow: 2px 2px 24px rgb(138, 138, 138);
+            display: inline-block;
+            background-color: green;
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background-color: #000000;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="a"></div>
+        <div class="b"></div>
+        <div class="c"></div>
+        <br>
+        <button onclick="ab()"> click </button>
+        <h1></h1>
+    </div>
+    <script>
+        function ab() {
+            var ab = document.querySelector(".a");
+            var bb = document.querySelector(".b");
+            var cb = document.querySelector(".c");
+            var h1 = document.querySelector("h1");
+
+
+            var r = Math.floor(Math.random() * 256);
+            var g = Math.floor(Math.random() * 256);
+            var b = Math.floor(Math.random() * 256);
+
+            ab.style.background = `rgb(${r},${g},${b})`;
+            //  console.log(`rgb(${r},${g},${b})`)
+
+
+
+            var r1 = Math.floor(Math.random() * 256);
+            var g1 = Math.floor(Math.random() * 256);
+            var b1 = Math.floor(Math.random() * 256);
+            var col2 = `rgb(${r1},${g1},${b1})`;
+
+            bb.style.background = `rgb(${r1},${g1},${b1})`;
+
+
+            var r2 = Math.floor(Math.random() * 256);
+            var g2 = Math.floor(Math.random() * 256);
+            var b2 = Math.floor(Math.random() * 256);
+            var col3 = `rgb(${r2},${g2},${b2})`;
+
+            cb.style.background = `rgb(${r2},${g2},${b2})`;
+
+
+            console.log(aaa)
+            console.log(col2)
+
+            console.log(col3)
+
+            if (`rgb(${r},${g},${b})`) {
+                h1.innerHTML = "you are win !!";
+            } else {
+                h1.innerHTML = "try again !!";
+
+            }
+        }
+    </script>
+</body>
+
+</html>

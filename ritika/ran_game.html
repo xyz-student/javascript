@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+           
+            height: 300px;
+            width: 300px;
+            position: relative;
+            top: 0%;
+            left: 0%;
+        }
+
+        body {
+            overflow: hidden;
+            background-image: url("pexels-elias-tigiser-2757549.jpg");
+            height: 100vh;
+            width: 100%;
+            background-size: cover;
+        }
+
+        
+
+       
+    </style>
+</head>
+
+<body>
+    <h1 style="color: white;"> </h1>
+    <div class="box">
+        <img src="b.gif" height="auto" width="100%" alt="">
+    </div>
+    
+    <script>
+        let box = document.querySelector(".box");
+        let score = document.querySelector("h1");
+        var counter = 0;
+        setInterval(function () {
+            box.style.top = Math.floor(Math.random() * 90) + "vh";
+            box.style.left = Math.floor(Math.random() * 90) + "%";
+        }, 1000)
+        box.addEventListener("click", function () {
+            box.classList.add("add");
+            counter += 1;
+            score.innerHTML = `your score is ${counter} `;
+        })
+        // box.addEventListener("mouseleave", function () {
+        //     box.classList.remove("add")
+        // })
+    </script>
+</body>
+
+</html>

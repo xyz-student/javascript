@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <STYle>
+        *{
+            padding: 0px;
+            margin: 0px;
+        }
+         body {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background-color: #1b006d;
+color: white;
+ 
+        }
+    </STYle>
+</head>
+
+<body>
+
+    <h1></h1>
+
+    <script>
+        var inp = +prompt("Number")
+        var a = document.querySelector("h1")
+        if (inp >= 50) {
+            a.innerHTML = "Your Value Is Too High <mark style='padding:20px;'>" + inp + "</mark>"
+        }
+        else if(inp == 30){
+            a.innerHTML = "Your Value Is Correct <mark style='padding:20px;'>" + inp + "</mark>"
+
+        } else {
+            a.innerHTML = "Your Value Is Too Low <mark style='padding:50px;'>" + inp + "</mark>"
+        }
+        
+       
+    </script>
+</body>
+
+</html>

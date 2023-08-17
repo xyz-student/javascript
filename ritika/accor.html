@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box_1,
+        .box_2 {
+            display: block !important;
+            transition: 0.3s;
+
+        }
+
+        .content,
+        .content2 {
+            display: none;
+            transition: 0.3s;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- ACCORDION -->
+    <div class="main1">
+        <button onclick="show()"> click here </button>
+        <div class="content">
+            <p>1111111Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, voluptate quaerat? Neque officiis
+                earum
+                sequi consequuntur vel, praesentium voluptates molestias, ullam, excepturi nesciunt ut veritatis placeat
+                quas inventore ab quaerat.
+            </p>
+        </div>
+    </div>
+    <div class="main2">
+        <button onclick="box_2()"> click here </button>
+        <div class="content2">
+            <p>2222222222Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, voluptate quaerat? Neque
+                officiis earum
+                sequi consequuntur vel, praesentium voluptates molestias, ullam, excepturi nesciunt ut veritatis placeat
+                quas inventore ab quaerat.
+            </p>
+        </div>
+    </div>
+
+    <script>
+
+        let content = document.querySelector(".content");
+        let content2 = document.querySelector(".content2");
+        function show() {
+            content.classList.toggle("box_1");
+        }
+        function box_2() {
+            content2.classList.toggle("box_2");
+        }
+    </script>
+</body>
+
+</html>

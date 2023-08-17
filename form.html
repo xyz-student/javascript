@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- <></>sjdfghsdnhf    -->
+
+
+    <!-- <script>
+        var div = document.createElement("h1");
+        var text = document.createTextNode("this is my content");
+        div.append(text);
+        document.body.append(div)
+    </script> -->
+
+
+    <!-- form -->
+
+    <form action="#" onsubmit="filldata()" >
+        <input type="text" placeholder="name" class="name"> <br><br>
+
+        <input type="submit"  >
+    </form>
+
+    <ul>
+         
+    </ul>
+
+    <script>
+
+        
+        var filldata = () => {
+            var li  = document.createElement("li")
+            var ul  = document.querySelector("ul") 
+            var name = document.querySelector(".name").value
+            var text = document.createTextNode(name)
+            var name = document.querySelector(".name").value = ""
+
+            li.append(text)
+            ul.append(li)
+
+        }
+
+
+
+    </script>
+</body>
+
+</html>

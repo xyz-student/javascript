@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .dark{
+            background-color: black;
+            color: white;
+        }
+        body{
+            text-align: center;
+            text-transform: capitalize;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        button{
+            border: 1px solid black;
+            padding: 20px;
+            width: 200px;
+        }
+        h1{
+            letter-spacing: 2px;
+        }
+    </style>
+</head>
+<body>
+ <div class="box">
+    <button onclick="dark()">Click Here</button>
+    <h1>JAVASCRIPT</h1>
+ </div>
+    <script>
+        function dark(){
+            document.body.classList.toggle('dark')         
+        }
+    </script>
+    dark mode
+</body>
+</html>

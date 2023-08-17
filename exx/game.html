@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* .main{
+            position: relative;
+            height: 100vh;
+        } */
+        .bg {
+            background-image: url("bg.gif");
+            height: 50vh;
+            width: 100%;
+            background-size: cover;
+            transform: rotateY(-180deg);
+        }
+
+        img {
+            position: absolute;
+            /* transform: translateY(-100%); */
+            top: 5%;
+        }
+        .top{
+           animation: top 0.3s linear;
+        }
+        @keyframes top{
+            0%{
+                transform: translateY(0px)   ;
+            }
+            50%{
+                transform: translateY(-60%)  ;
+            }
+        }
+        .x{
+            transform: translate(100px);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="bg"></div>
+        <img src="man.gif" height="auto" class="img" width="30%" alt="">
+    </div>
+    <button class="jump">double click</button>
+    <button class="go">go</button>
+    <button class="back">back</button>
+
+    <script>
+        let img = document.querySelector(".img");
+        let jump = document.querySelector(".jump");
+
+        let go = document.querySelector(".go");
+        let back = document.querySelector(".back");
+        jump.addEventListener("click", function () {
+            img.classList.toggle("top");
+        })
+        go.addEventListener("click", function () {
+            img.classList.toggle("x");
+        })
+    </script>
+</body>
+
+</html>

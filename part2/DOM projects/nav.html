@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .nav>ul {
+            display: flex;
+            justify-content: center;
+
+
+        }
+
+        .scroll_nav>ul {
+            display: flex;
+            justify-content: center;
+            background-color: rgb(33, 38, 144);
+        }
+
+        .nav>ul>li,
+        .scroll_nav>ul>li {
+            padding: 20px;
+            margin-right: 10px;
+            list-style: none;
+        }
+
+        ul>li>a {
+            text-decoration: none;
+            text-transform: capitalize;
+            color: white;
+        }
+
+        * {
+            margin: 0px;
+
+            padding: 0px;
+        }
+
+        .bg {
+            background-image: url("./0.jpg");
+            height: 70vh;
+            width: 100%;
+            background-size: cover;
+        }
+
+        .scroll_nav {
+
+
+            position: fixed;
+            width: 100%;
+            top: -10%;
+
+        }
+
+       
+    </style>
+</head>
+
+<body>
+
+    <!-- blue nav -->
+    <div class="scroll_nav">
+        <ul>
+            <li><a href="">home</a></li>
+            <li><a href="">about</a></li>
+            <li><a href="">blogs</a></li>
+        </ul>
+    </div>
+
+    <div class="bg">
+        <div class="nav">
+            <ul>
+                <li><a href="">home</a></li>
+                <li><a href="">about</a></li>
+                <li><a href="">blogs</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nisi ex ipsa magni modi, aspernatur voluptatem
+        cupiditate eveniet consequuntur, earum possimus voluptatibus veritatis, molestias quisquam beatae accusantium
+        doloribus eos reprehenderit minus itaque dolorem ducimus placeat repudiandae hic. Ab quia vitae aspernatur magni
+        optio quam itaque, deleniti corporis laboriosam? Nisi blanditiis aspernatur rem nesciunt voluptates placeat
+        vitae, ratione cum omnis ullam repellat quidem. Deleniti blanditiis non vel unde aut modi repudiandae
+        accusantium labore architecto minus, repellendus dolorem corporis, eligendi voluptates ipsa quibusdam. Voluptas
+        totam sapiente facilis doloremque aut. Fuga libero quam explicabo quas odit. Assumenda veritatis rem adipisci a
+        sint eveniet sunt dicta temporibus, voluptates qui obcaecati aperiam sed error rerum sit earum velit deleniti
+        esse laboriosam, repudiandae modi perspiciatis. Autem vitae iure expedita modi aliquam ipsa, nam pariatur
+        dolorem eveniet tenetur velit perspiciatis laudantium explicabo provident, ullam fuga at ab esse est error?
+        Vitae qui accusamus magnam, beatae possimus aliquid harum reiciendis, veritatis soluta facilis iure. Praesentium
+        natus, veritatis illo assumenda quo sint accusantium tempora! Cupiditate, animi delectus? Dolores officiis
+        molestiae iusto assumenda. Incidunt tempore culpa repudiandae numquam libero modi alias asperiores, excepturi
+        aut? Voluptatibus commodi illo sed ducimus quisquam perspiciatis suscipit. Ut, atque. Ipsam necessitatibus
+        dignissimos laudantium eaque, explicabo reprehenderit! </p>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nisi ex ipsa magni modi, aspernatur voluptatem
+        cupiditate eveniet consequuntur, earum possimus voluptatibus veritatis, molestias quisquam beatae accusantium
+        doloribus eos reprehenderit minus itaque dolorem ducimus placeat repudiandae hic. Ab quia vitae aspernatur magni
+        optio quam itaque, deleniti corporis laboriosam? Nisi blanditiis aspernatur rem nesciunt voluptates placeat
+        vitae, ratione cum omnis ullam repellat quidem. Deleniti blanditiis non vel unde aut modi repudiandae
+        accusantium labore architecto minus, repellendus dolorem corporis, eligendi voluptates ipsa quibusdam. Voluptas
+        totam sapiente facilis doloremque aut. Fuga libero quam explicabo quas odit. Assumenda veritatis rem adipisci a
+        sint eveniet sunt dicta temporibus, voluptates qui obcaecati aperiam sed error rerum sit earum velit deleniti
+        esse laboriosam, repudiandae modi perspiciatis. Autem vitae iure expedita modi aliquam ipsa, nam pariatur
+        dolorem eveniet tenetur velit perspiciatis laudantium explicabo provident, ullam fuga at ab esse est error?
+        Vitae qui accusamus magnam, beatae possimus aliquid harum reiciendis, veritatis soluta facilis iure. Praesentium
+        natus, veritatis illo assumenda quo sint accusantium tempora! Cupiditate, animi delectus? Dolores officiis
+        molestiae iusto assumenda. Incidunt tempore culpa repudiandae numquam libero modi alias asperiores, excepturi
+        aut? Voluptatibus commodi illo sed ducimus quisquam perspiciatis suscipit. Ut, atque. Ipsam necessitatibus
+        dignissimos laudantium eaque, explicabo reprehenderit! </p>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nisi ex ipsa magni modi, aspernatur voluptatem
+        cupiditate eveniet consequuntur, earum possimus voluptatibus veritatis, molestias quisquam beatae accusantium
+        doloribus eos reprehenderit minus itaque dolorem ducimus placeat repudiandae hic. Ab quia vitae aspernatur magni
+        optio quam itaque, deleniti corporis laboriosam? Nisi blanditiis aspernatur rem nesciunt voluptates placeat
+        vitae, ratione cum omnis ullam repellat quidem. Deleniti blanditiis non vel unde aut modi repudiandae
+        accusantium labore architecto minus, repellendus dolorem corporis, eligendi voluptates ipsa quibusdam. Voluptas
+        totam sapiente facilis doloremque aut. Fuga libero quam explicabo quas odit. Assumenda veritatis rem adipisci a
+        sint eveniet sunt dicta temporibus, voluptates qui obcaecati aperiam sed error rerum sit earum velit deleniti
+        esse laboriosam, repudiandae modi perspiciatis. Autem vitae iure expedita modi aliquam ipsa, nam pariatur
+        dolorem eveniet tenetur velit perspiciatis laudantium explicabo provident, ullam fuga at ab esse est error?
+        Vitae qui accusamus magnam, beatae possimus aliquid harum reiciendis, veritatis soluta facilis iure. Praesentium
+        natus, veritatis illo assumenda quo sint accusantium tempora! Cupiditate, animi delectus? Dolores officiis
+        molestiae iusto assumenda. Incidunt tempore culpa repudiandae numquam libero modi alias asperiores, excepturi
+        aut? Voluptatibus commodi illo sed ducimus quisquam perspiciatis suscipit. Ut, atque. Ipsam necessitatibus
+        dignissimos laudantium eaque, explicabo reprehenderit! </p>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nisi ex ipsa magni modi, aspernatur voluptatem
+        cupiditate eveniet consequuntur, earum possimus voluptatibus veritatis, molestias quisquam beatae accusantium
+        doloribus eos reprehenderit minus itaque dolorem ducimus placeat repudiandae hic. Ab quia vitae aspernatur magni
+        optio quam itaque, deleniti corporis laboriosam? Nisi blanditiis aspernatur rem nesciunt voluptates placeat
+        vitae, ratione cum omnis ullam repellat quidem. Deleniti blanditiis non vel unde aut modi repudiandae
+        accusantium labore architecto minus, repellendus dolorem corporis, eligendi voluptates ipsa quibusdam. Voluptas
+        totam sapiente facilis doloremque aut. Fuga libero quam explicabo quas odit. Assumenda veritatis rem adipisci a
+        sint eveniet sunt dicta temporibus, voluptates qui obcaecati aperiam sed error rerum sit earum velit deleniti
+        esse laboriosam, repudiandae modi perspiciatis. Autem vitae iure expedita modi aliquam ipsa, nam pariatur
+        dolorem eveniet tenetur velit perspiciatis laudantium explicabo provident, ullam fuga at ab esse est error?
+        Vitae qui accusamus magnam, beatae possimus aliquid harum reiciendis, veritatis soluta facilis iure. Praesentium
+        natus, veritatis illo assumenda quo sint accusantium tempora! Cupiditate, animi delectus? Dolores officiis
+        molestiae iusto assumenda. Incidunt tempore culpa repudiandae numquam libero modi alias asperiores, excepturi
+        aut? Voluptatibus commodi illo sed ducimus quisquam perspiciatis suscipit. Ut, atque. Ipsam necessitatibus
+        dignissimos laudantium eaque, explicabo reprehenderit! </p>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nisi ex ipsa magni modi, aspernatur voluptatem
+        cupiditate eveniet consequuntur, earum possimus voluptatibus veritatis, molestias quisquam beatae accusantium
+        doloribus eos reprehenderit minus itaque dolorem ducimus placeat repudiandae hic. Ab quia vitae aspernatur magni
+        optio quam itaque, deleniti corporis laboriosam? Nisi blanditiis aspernatur rem nesciunt voluptates placeat
+        vitae, ratione cum omnis ullam repellat quidem. Deleniti blanditiis non vel unde aut modi repudiandae
+        accusantium labore architecto minus, repellendus dolorem corporis, eligendi voluptates ipsa quibusdam. Voluptas
+        totam sapiente facilis doloremque aut. Fuga libero quam explicabo quas odit. Assumenda veritatis rem adipisci a
+        sint eveniet sunt dicta temporibus, voluptates qui obcaecati aperiam sed error rerum sit earum velit deleniti
+        esse laboriosam, repudiandae modi perspiciatis. Autem vitae iure expedita modi aliquam ipsa, nam pariatur
+        dolorem eveniet tenetur velit perspiciatis laudantium explicabo provident, ullam fuga at ab esse est error?
+        Vitae qui accusamus magnam, beatae possimus aliquid harum reiciendis, veritatis soluta facilis iure. Praesentium
+        natus, veritatis illo assumenda quo sint accusantium tempora! Cupiditate, animi delectus? Dolores officiis
+        molestiae iusto assumenda. Incidunt tempore culpa repudiandae numquam libero modi alias asperiores, excepturi
+        aut? Voluptatibus commodi illo sed ducimus quisquam perspiciatis suscipit. Ut, atque. Ipsam necessitatibus
+        dignissimos laudantium eaque, explicabo reprehenderit! </p> -->
+
+    <script>
+        let scroll_nav = document.querySelector(".scroll_nav");
+        window.onscroll = function () {
+            let Y = pageYOffset;
+            console.log(Y)
+            if (Y < 100) {
+                // to back top
+                scroll_nav.style.top = "-10%"
+                scroll_nav.style.transition = " 0.2s"
+
+            } else {
+                scroll_nav.style.top = "0%"
+
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .abc {
+            animation: ani 2s linear forwards;
+          
+        }
+
+        @keyframes ani{
+            100%{
+                opacity: 0;
+                transform: translate( 500px, -100px);
+            }
+            50%{
+                opacity: 1;
+
+                 
+            }
+        }
+.c{
+    height: 50vh;
+            width: 100%;
+            border: 1px solid red;
+            overflow: hidden;
+}
+    </style>
+</head>
+
+<body>
+
+    <div class="c"></div>
+    <div class="box"></div>
+    <button onclick="play()">
+        click here
+    </button>
+
+    <script>
+        var box = document.querySelector(".box")
+        function play() {
+            var a = document.createElement("h1")
+            var text = document.createTextNode("like")
+            a.append(text)
+            document.querySelector('.c').prepend(a)
+
+            var ran1 = Math.floor(Math.random() * 700)
+            var ran2 = Math.floor(Math.random() * 700)
+            // a.classList.add("red")
+            a.style.transform = `translateX(${ran1}px) translateY(${ran2}px)`
+           
+             a.classList.add('abc')
+        }
+
+
+    </script>
+</body>
+
+</html>

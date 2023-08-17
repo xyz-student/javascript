@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main {
+            background-color: rgb(255, 214, 214);
+            height: 200px;
+            width: 200px;
+            animation: ani 3s infinite linear;
+        }
+
+        @keyframes ani {
+            0%{
+                transform: translate(0px,0px)  rotate(0deg);
+            }
+            50%{
+                transform: translate(600px , 600px) rotate(180deg) ;
+            }
+            100%{
+                transform: translate(1200px , -600px) rotate(-180deg) ;
+                filter: hue-rotate(360deg);
+            }
+            
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="main"></div>
+
+
+
+</body>
+
+</html>

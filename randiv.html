@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- how to create ANY TAG/element in js using document.createElement -->
+    <!-- how to insert a text inside the tag/element using   document.createTextNode-->
+
+
+
+
+
+    <!-- APPRND -->
+    <!-- APPEND insert content inside the tag -->
+    <!-- 1st . to create tag/element -->
+    <!-- 2nd . to create text -->
+    <!-- 3rd . add the text inside the tag -->
+
+    <button onclick="p1()">click here</button>
+    <button onclick="p2()">click here</button>
+ 
+    <script>
+        function p1() {
+            var ben_h1 = document.createElement("h1")
+            var text = document.createTextNode("tag 1")
+            ben_h1.append(text) // <h1> this is my h1 tag </h1>
+            document.body.append(ben_h1)
+            ben_h1.style.background = "yellow"
+            ben_h1.style.width = "200px"
+            ben_h1.style.height = "200px"
+        }
+        function p2() {
+            var ben_h2 = document.createElement("h1")
+            var text2 = document.createTextNode("tag 2")
+            ben_h2.append(text2) // <h1> this is my h1 tag </h1>
+            document.body.append(ben_h2)
+            ben_h2.style.background = "red"
+            ben_h2.style.width = "200px"
+            ben_h2.style.height = "200px"
+        }
+
+    </script>
+</body>
+
+</html>

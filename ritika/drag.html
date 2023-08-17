@@ -1,0 +1,72 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <style>
+        #div1,
+        #div2 {
+            float: left;
+            width: 100px;
+            height: 35px;
+            margin: 10px;
+            padding: 10px;
+            border: 1px solid black;
+        }
+    </style>
+    <script>
+        function allowDrop(ab) {
+            ab.preventDefault();
+        }
+
+        function drag(ab) {
+            ab.dataTransfer.setData("text", ab.target.id);
+        }
+
+        function drop(ab) {
+            ab.preventDefault();
+            var data = ab.dataTransfer.getData("text");
+            ab.target.appendChild(document.getElementById(data));
+        }
+    </script>
+
+    <script>
+        function abc(aaa) {
+            aaa.preventDefault();
+        }
+
+        function drag(aaa) {
+            aaa.dataTransfer.setData("text", aaa.target.id);
+        }
+
+        function drop(aaa) {
+            aaa.preventDefault();
+            var dataqqq = aaa.dataTransfer.getData("text");
+            aaa.target.appendChild(document.getElementById(dataqqq));
+        }
+    </script>
+     
+</head>
+
+<body>
+
+  
+    <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+
+        <img src="2.png" draggable="true" ondragstart="drag(event)" id="drag1" width="88" height="31">
+    </div>
+
+    <div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    
+<!-- !!!!!!!!!!!!!!!!!!!!!!!!!! -->
+
+
+<div id="div1" ondrop="drop(event)" ondragover="abc(event)">
+
+    <img src="1.png" draggable="true" ondragstart="drag(event)" id="drag1" width="88" height="31">
+</div>
+
+<div id="div2" ondrop="drop(event)" ondragover="abc(event)"></div>
+
+</body>
+
+</html>

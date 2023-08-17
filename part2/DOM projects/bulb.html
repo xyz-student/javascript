@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background-color: #ffffff;
+
+        }
+    </style>
+</head>
+
+<body>
+    <img class="abc" src="on.jpg" height="500px" width="400px" alt="">
+    <button onclick="on()">on</button>
+    <button onclick="off()">off</button>
+
+    <script>
+        let img = document.querySelector("img");
+
+        // function on
+        function on() {
+            img.src = "on.jpg";
+        }
+        function off() {
+            img.src = "off.jpg";
+        }
+    </script>
+</body>
+
+</html>

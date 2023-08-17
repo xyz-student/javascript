@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        span {
+            text-transform: uppercase;
+            font-size: 50px;
+            display: inline-block;
+            font-weight: bolder;
+            color: rgb(143, 255, 255);
+            text-shadow: 1px 1px 13px rgb(159, 255, 245);
+        }
+        body{
+            overflow: hidden;
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .ani{
+            animation: ani1 0.8s linear  ;
+             
+        }
+        @keyframes ani1{
+            0%{
+                transform: rotateX(0deg) skewY(0deg);
+            }
+            30%{
+                font-size: 30PX;
+                transform: rotateX(10deg) skewY(-30deg);
+            }
+            50%{
+                filter: hue-rotate(120deg);
+                transform:  rotateX(80deg) skewY(80deg);
+            }
+        }
+        .text{
+            width: 50%;
+            overflow: hidden;
+      
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="text">
+        <span class="sp1">j</span>
+        <span class="sp2">a</span>
+        <span class="sp3">v</span>
+        <span class="sp4">a</span>
+        <span class="sp5">s</span>
+        <span class="sp6">c</span>
+        <span class="sp7">r</span>
+        <span class="sp8">i</span>
+        <span class="sp9">p</span>
+        <span class="sp10">t</span>
+    </div>
+    <script>
+        let span1 = document.querySelector(".sp1");
+        let span2 = document.querySelector(".sp2");
+        let span3 = document.querySelector(".sp3");
+        let span4 = document.querySelector(".sp4");
+        let span5 = document.querySelector(".sp5");
+        let span6 = document.querySelector(".sp6");
+        let span7 = document.querySelector(".sp7");
+        let span8 = document.querySelector(".sp8");
+        let span9 = document.querySelector(".sp9");
+        let span10 = document.querySelector(".sp10");
+
+
+        span1.addEventListener("mouseenter",function(){
+            span1.classList.toggle("ani")
+        })
+
+        span2.addEventListener("mouseenter",function(){
+            span2.classList.toggle("ani")
+        })
+
+        span3.addEventListener("mouseenter",function(){
+            span3.classList.toggle("ani")
+        })
+
+        span4.addEventListener("mouseenter",function(){
+            span4.classList.toggle("ani")
+        })
+
+        span5.addEventListener("mouseenter",function(){
+            span5.classList.toggle("ani")
+        })
+
+        span6.addEventListener("mouseenter",function(){
+            span6.classList.toggle("ani")
+        })
+
+        span7.addEventListener("mouseenter",function(){
+            span7.classList.toggle("ani")
+        })
+
+        span8.addEventListener("mouseenter",function(){
+            span8.classList.toggle("ani")
+        })
+
+        span9.addEventListener("mouseenter",function(){
+            span9.classList.toggle("ani")
+        })
+
+        span10.addEventListener("mouseenter",function(){
+            span10.classList.toggle("ani")
+        })
+    </script>
+</body>
+
+</html>

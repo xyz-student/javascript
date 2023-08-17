@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main>div {
+
+            width: 300px;
+            /* background-color: rgb(85, 227, 184); */
+            position: relative;
+            margin: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 40px;
+
+        }
+
+        .box1,
+        .box2 {
+            /* transform: translateX(0px); */
+            transition: 0s;
+            left: 0%;
+        }
+        body{
+            overflow: hidden;
+            background-color: rgb(219, 214, 214);
+        }
+        form>input{
+            padding: 5px ;
+            margin: 5px;
+            border: 1px solid black;
+            
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="box1"><img src="car1.png" height="auto" width="90%" alt=""></div>
+        <div class="box2"><img src="car2.png" height="auto" width="100%" alt=""></div>
+    </div>
+    <form action="" name="" >
+         <input type="text" id="inp1" placeholder="1st Player Name :" name="" > <br>
+         <input type="text" id="inp2" placeholder="2nd Player Name :" name="" > <br>
+    <!-- <button type="submit" onclick="nameaaa()">go aaa!!</button> -->
+       
+    </form>
+    <button type="submit" onclick="main()"> Go !!</button>
+    <script>
+        let box1 = document.querySelector(".box1");
+        
+
+        let box2 = document.querySelector(".box2");
+       
+
+
+
+        function main() {
+            let inp1 = document.querySelector("#inp1").value;
+        let inp2 = document.querySelector("#inp2").value;
+
+            // player 1
+            let speed = Math.floor(Math.random() * 4);
+            box1.style.transition = `${speed}s`;
+            box1.style.left = "80%";
+
+
+            // player 2
+
+            let speed2 = Math.floor(Math.random() * 4);
+            box2.style.transition = `${speed2}s`;
+            box2.style.left = "80%";
+
+            setTimeout(function () {
+                if (speed >= speed2) {
+                    alert( `${inp2}  is Win !!!` )
+                } else if (speed <= speed2) {
+                    alert(`${inp1}  is Win !!!`)
+
+                } else if (`${inp1}  & ${inp2} Got Same Points`) {
+                    alert("stop")
+
+                }
+            }, 2700);
+        }
+
+    </script>
+</body>
+
+</html>

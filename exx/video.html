@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <video class="v1" src="./pexels-pixabay-856281-1920x1080-25fps.mp4" height="auto" type="video/mp4" width="30%"
+        autoplay muted loop></video>
+    <br><br>
+
+    <video onclick="play1()" src="./Pexels Videos 2059694.mp4" height="auto" type="video/mp4" width="30%"></video>
+    <video onclick="play2()" src="./pexels-lisa-fotios-1847910-1920x1080-30fps (1).mp4" height="auto" type="video/mp4"
+        width="30%"></video>
+
+
+    <script>
+        var v1 = document.querySelector(".v1")
+        var play1 = () => {
+            v1.src = "./Pexels Videos 2059694.mp4"
+        }
+        var play2 = () => {
+            v1.src = "./pexels-lisa-fotios-1847910-1920x1080-30fps (1).mp4"
+        }
+    </script>
+
+
+</body>
+
+</html>

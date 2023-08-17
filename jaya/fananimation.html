@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .my_on {
+           
+            animation: on 1s infinite linear;
+        }
+
+        @keyframes on {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+        body{
+            text-align: center;
+            background-color: rgb(239, 181, 101);
+            height: 100vh;
+            width: 100%;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        button{
+            width: 200px;
+            border: 1px solid black;
+            padding: 20px;
+            background-color: transparent;
+            font-weight: bold;
+            font-size: 20px;
+            text-transform: capitalize;
+            transition: 0.4s;
+        }
+        button:hover{
+background-color: rgb(197, 239, 239);
+box-shadow: 2px 2px 23px rgb(196, 198, 198);
+
+        }
+    </style>
+</head>
+
+<body>
+   <div class="box">
+    <img src="fan.png" id="img" height="auto" width="50%" alt=""> <br>
+    <button onclick="on()">on</button>
+    <button onclick="off()">stop</button>
+   </div>
+    <script>
+        var img = document.getElementById("img");
+        function on() {
+            img.classList.add("my_on");
+        }
+        function off() {
+            img.classList.remove("my_on");
+        }
+
+    </script>
+</body>
+
+</html>

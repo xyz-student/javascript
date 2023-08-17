@@ -1,0 +1,62 @@
+<!-- oop -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- oop -->
+    <!-- In JavaScript, classes are the special type of functions. We can define the class just like function declarations and function expressions. -->
+
+
+    <!-- <script>
+        class A {
+            constructor(name, age) {
+                this.name = name;
+                this.age = age;
+            }
+            show() {
+                document.write("my name is " + this.name + "my age is " + this.age)
+            }
+        }
+
+        obj = new A('lala',90)
+obj.show()
+    </script> -->
+
+
+
+    <script>
+
+        class student_name {
+            constructor(st_name, st_marks, st_email) {
+                this.st_name = st_name
+                this.st_marks = st_marks
+                this.st_email = st_email
+            }
+            ben_show() {
+                document.write(`my name is ${this.st_name} marks : ${this.st_marks} email is ${this.st_email}  <br>`)
+            }
+        }
+        // to create objects
+
+        obj = new student_name("ben", "90%", " ben123@gmail.com") // its a my objects
+        obj.ben_show() // call function
+
+
+        obj1 = new student_name("varun", "30%", "varun@gmail.com")
+        obj1.ben_show()
+
+
+        ben_obj = new student_name("karan", '50%', 'hjfgjsdfggh@gmail.com')
+        ben_obj.ben_show()
+    </script>
+
+
+</body>
+
+</html>

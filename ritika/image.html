@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main_image {
+            position: relative;
+        }
+
+        img {
+            position: absolute;
+            top: 0%;
+            left: 0%;
+           
+        }
+        .ani{
+           left: 50%;
+           transform: rotate(40deg);
+           transition: 4s;
+           animation: ani 2s  forwards;
+
+        }
+        .img_1{
+            z-index: 20;
+           
+            
+        }
+        /* @keyframes ani{
+            0%{
+                opacity: 10;
+            }
+            100%{
+                opacity: 0.6;
+            }
+        }
+     */
+    </style>
+</head>
+
+<body>
+    <div class="main_image">
+        <img src="nat1.jpg" class="img_1" height="auto" width="30%" alt="">
+        <img src="nat2.jpg" class="img_2" height="auto" width="30%" alt="">
+        <img src="nat3.jpg" class="img_3" height="auto" width="30%" alt="">
+    </div>
+    <script>
+        let img1 = document.querySelector(".img_1")
+        let img2 = document.querySelector(".img_2")
+        let img3 = document.querySelector(".img_3")
+        img1.addEventListener("mouseenter",function(){
+            img1.classList.toggle("ani")
+            img1.style.transition="4s";
+        })
+        
+
+        img2.addEventListener("mouseenter",function(){
+            img2.classList.toggle("ani")
+            img2.style.transition="4s";
+        })
+        
+
+
+        img3.addEventListener("mouseenter",function(){
+            img3.classList.toggle("ani")
+            // img3.style.transition="4s";
+        })
+       
+    </script>
+</body>
+
+</html>

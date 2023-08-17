@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+<!-- <div id="demo"></div>
+    <script>
+        setInterval(function () {
+            const person = { fname: "John", lname: "Doe", age: 25 };
+
+            let txt = "";
+            for (let x in person) {
+                txt += person[x] + " ";
+            }
+
+            document.getElementById("demo").innerHTML = txt;
+        }, 1000)
+    </script> -->
+    
+    <script>
+        const arr = [1,2,3,4,5,1,2,3,4,5];
+const delay = 1000;
+              
+arr.forEach(
+    (el, i) => {
+      setTimeout(() => document.write(el), delay * i);
+    }
+);
+    </script>
+</body>
+
+</html>

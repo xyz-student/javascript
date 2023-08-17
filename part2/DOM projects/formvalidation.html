@@ -1,0 +1,233 @@
+<style>
+    body {
+
+        font-size: 16px;
+        background: #f9f9f9;
+        font-family: "seago UI", "Helvetica neue", "arial", sans-serif;
+    }
+
+    h2 {
+        text-align: center;
+        text-decoration: underline;
+    }
+
+    form {
+        width: 300px;
+        background: #fff;
+        padding: 15px 40px 40px;
+        border: 1px solid #ccc;
+        margin: 50px auto 0;
+        border-radius: 5px;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    label i {
+        color: #999;
+        font-size: 80%;
+    }
+
+    input,
+    select {
+        border: 1 px solid #ccc;
+        padding: 10px;
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+        border-radius: 2px;
+    }
+
+    .row {
+        padding-bottom: 10px;
+    }
+
+    .form-inline {
+        border: 1px solid #ccc;
+        padding: 8px 10px 4px;
+        border-radius: 2px;
+    }
+
+    .form-inline label,
+    .form-inline input {
+        display: inline-block;
+        width: auto;
+        padding-right: 15px;
+    }
+
+    .error {
+        color: red;
+        font-size: 90%;
+    }
+
+    input[type="submit"] {
+        font-size: 110%;
+        font-weight: 110;
+        background: #006dcc;
+        border-color: #016BC1;
+        box-shadow: 0 3px 0 #0165b6;
+        color: #fff;
+        margin-top: 10px;
+        cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+        background: #0165b6;
+
+    }
+</style>
+
+
+
+</head>
+
+
+
+<body>
+
+    <script>
+
+        // defining a function to display error message
+        function printError(elemId, hintMsg) {
+            document.getElementById(elemId).innerHTML = hintMsg;
+        }
+        // defining a function to validate form
+        function validForm() {
+            //retriving the values of form elements
+            var name = document.contactForm.name.value;
+            var email = document.contactForm.email.value;
+            var mobile = document.contactForm.mobile.value;
+            var country = document.contactForm.country.value;
+            var gender = document.contactForm.gender.value;
+            // defining error variables with a default value
+            var nameErr = emailErr = mobileErr = countryErr = genderErr = true;
+            // validate name
+            if (name == "") {
+                printError("nameErr", "please enter your name");
+            } else {
+                var regex = /^[a-zA-Z\s]+$/;
+                if (regex.test(name) === false) {
+                    printError("nameErr", "please enter a valid name");
+                } else {
+                    printError("nameErr", "");
+                    nameErr = false;
+                }
+            }
+            // validate email address
+            if (email == "") {
+                printError("emailErr", "please enter your email address");
+            } else {
+                //regular expression for basic email validation
+                var regex = /^\S+@\S+\.\S+$/;
+                if (regex.test(email) === false) {
+                    printError("emailErr", "please enter a valid email address");
+                } else {
+                    printError("emailErr", "");
+                    emailErr = false;
+                }
+            }
+            //validate mobile number
+            if (mobile == "") {
+                printError("mobileErr", "please enter your mobile number");
+            } else {
+                var regex = /^[1-9]\d{9}$/;
+                if (regex.test(mobile) === false) {
+                    printError("mobileErr", "please enter a valid 10 digit mobile number");
+                } else {
+                    printError("mobileErr", "");
+                    mobileErr = false;
+                }
+            }
+            //validate country
+            if (country == "select") {
+                printError("countryErr", "please enter your country");
+            } else {
+                printError("countryErr", "");
+                countryErr = false;
+            }
+            //validate gender
+            if (gender == "") {
+                printError("genderErr", "please select your gender");
+            } else {
+                printError("genderErr", "");
+                genderErr = false;
+            }
+            // prevent the form from being submitted if there are any errors
+            if ((nameErr || emailErr || mobileErr || countryErr || genderErr) == true) {
+                return false;
+            }
+            else {
+                // Creating a string from input data for preview
+                var dataPreview = "You've entered the following details: \n" +
+                    "Full Name: " + name + "\n" +
+                    "Email Address: " + email + "\n" +
+                    "Mobile Number: " + mobile + "\n" +
+                    "Country: " + country + "\n" +
+                    "Gender: " + gender + "\n";
+                alert(dataPreview);
+            }
+
+        };
+
+    </script>
+
+    <form action="" name="contactForm" onsubmit="return validForm()" method="post" enctype="multipart/form-data">
+        <h2>application form</h2>
+        <div class="row">
+            <label>full name</label>
+            <input type="text" name="name">
+            <div class="error" id="nameErr"></div>
+        </div>
+        <div class="row">
+            <label>email address</label>
+            <input type="text" name="email">
+            <div class="error" id="emailErr"></div>
+        </div>
+        <div class="row">
+            <label>mobile number</label>
+            <input type="text" name="mobile" maxlength="10">
+            <div class="error" id="mobileErr"></div>
+        </div>
+        <div class="row">
+            <label>country</label>
+            <select name="country">
+                <option>select</option>
+                <option>australia</option>
+                <option>india</option>
+                <option>us</option>
+                <option>uk</option>
+            </select>
+            <div class="error" id="countryErr"></div>
+        </div>
+        <div class="row">
+            <label>gender</label>
+            <div class="form-inline">
+                <label><input type="radio" name="gender" value="male">male</label>
+                <label><input type="radio" name="gender" value="female">female</label>
+            </div>
+            <div class="error" id="genderErr"></div>
+        </div>
+        <div class="row">
+            <label>hobbies <i></i></label>
+            <div class="form-inline">
+                <label><input type="checkbox" name="hobbies[]" value="sports">sports</label>
+                <label><input type="checkbox" name="hobbies[]" value="movies">movies</label>
+                <label><input type="checkbox" name="hobbies[]" value="music">music</label>
+            </div>
+        </div>
+        <div class="row">
+            <input type="submit" value="submit" name="submit">
+        </div>
+    </form>
+
+
+
+
+
+</body>
+
+
+
+</html>

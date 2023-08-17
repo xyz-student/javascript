@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 576567.87687 -->
+    <!-- random  {floor }-->
+
+
+    <!-- <script>
+        let create_h1 = document.createElement("h1");
+        let text = document.createTextNode("hi this is my class");
+        create_h1.append(text);
+        document.body.append(create_h1)
+    </script> -->
+
+    <button onclick=" abc()"> Random Number </button>
+    <script>
+        function abc() {
+            var ran = Math.floor(Math.random() * 3);
+            if(ran == 2){
+                alert(ran + " you are win")
+                document.body.style.background="green";
+            }else{
+                document.body.style.background="black";
+                alert(ran + " you are not win")
+
+            }
+        }
+       
+    </script>
+
+</body>
+
+</html>

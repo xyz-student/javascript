@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .on{
+           animation:ani 4s infinite linear;
+           
+        }
+        .speed{
+            animation:ani 0.1s infinite linear;
+        }
+        @keyframes ani{
+            100%{
+                transform: rotate(  360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- FAN ANIMATION -->
+
+    <img src="fan.png" height="auto" width="30%" alt="">
+    <button onclick="on()">normal speed</button>
+    <button onclick="off()">off</button>
+    <button onclick="speed()">speed</button>
+
+    <script>
+        const a = document.querySelector("img");
+        function on(){
+            // add // toggle // remove
+            a.classList.add("on")
+            a.classList.remove("speed")
+
+        }
+        function off(){
+            // add // toggle // remove
+            a.classList.remove("on")
+            a.classList.remove("speed")
+  
+        }
+        function speed(){
+            // add // toggle // remove
+            a.classList.add("speed")
+            a.classList.remove("on")
+
+        }
+    </script>
+</body>
+
+</html>
+
+<!--  -->
